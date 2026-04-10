@@ -150,10 +150,58 @@
     </visual>
   </link>
 
-  <joint name="chassis_to_front_radar" type="fixed">
+<link name="front_lidar_body">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <link name="front_lidar_lens">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/>
+      </geometry>
+      <material name="sensor_blue"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_front_lidar" type="fixed">
     <parent link="chassis"/>
-    <child link="front_radar"/>
-    <origin xyz="0.52 0 -0.05" rpy="0 0 0"/>
+    <child link="front_lidar_body"/>
+    <origin xyz="0.5 0 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="front_lidar_to_lens" type="fixed">
+    <parent link="front_lidar_body"/>
+    <child link="front_lidar_lens"/>
+    <origin xyz="0.02 0 0" rpy="0 1.5708 0"/>
+  </joint>
+
+  <link name="rear_lidar_body">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <link name="rear_lidar_lens">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.1"/>
+      </geometry>
+      <material name="sensor_blue"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_rear_lidar" type="fixed">
+    <parent link="chassis"/>
+    <child link="rear_lidar_body"/>
+    <origin xyz="-0.5 0 0" rpy="0 0 3.14159"/>
+  </joint>
+  <joint name="rear_lidar_to_lens" type="fixed">
+    <parent link="rear_lidar_body"/>
+    <child link="rear_lidar_lens"/>
+    <origin xyz="0.02 0 0" rpy="0 1.5708 0"/>
   </joint>
 
 </robot>
