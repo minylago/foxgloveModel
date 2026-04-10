@@ -120,7 +120,7 @@
     <origin xyz="0.1 -0.28 0.11" rpy="0 0 0"/>
   </joint>
 
-  <link name="front_camera">
+  <link name="front_radar">
     <visual>
       <geometry>
         <box size="0.05 0.15 0.1"/>
@@ -128,9 +128,9 @@
       <material name="black"/>
     </visual>
   </link>
-  <joint name="chassis_to_front_camera" type="fixed">
+  <joint name="chassis_to_front_radar" type="fixed">
     <parent link="chassis"/>
-    <child link="front_camera"/>
+    <child link="front_radar"/>
     <origin xyz="0.52 0 0.05" rpy="0 0 0"/>
   </joint>
 
