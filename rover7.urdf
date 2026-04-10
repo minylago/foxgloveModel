@@ -79,7 +79,7 @@
   <joint name="chassis_to_tf_cam" type="fixed">
     <parent link="chassis"/>
     <child link="top_front_camera"/>
-    <origin xyz="0.46 -0.2 0.12" rpy="0 0 0"/>
+    <origin xyz="0.48 -0.02 0.12" rpy="0 0 0"/>
   </joint>
 
   <link name="top_center_gateway">
