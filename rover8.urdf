@@ -41,6 +41,35 @@
     <origin xyz="0 0 0.15" rpy="0 0 0"/>
   </joint>
   
+  <link name="top_rear_camera">
+    <visual>
+      <geometry><box size="0.03 0.04 0.04"/></geometry>
+      <material name="black"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
+      <geometry><box size="0.08 0.02 0.002"/></geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_top_rear_camera" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_camera"/>
+    <origin xyz="-0.48 -0.05 0.12" rpy="0 0 3.14159"/>
+  </joint>
+
+  <link name="top_rear_CANgateway_RearCAM">
+    <visual>
+      <geometry><box size="0.06 0.04 0.03"/></geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_trl_gateway" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_CANgateway_RearCAM"/>
+    <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
+  </joint>
+
   <link name="top_front_left_box_RPiv5">
     <visual>
       <geometry><box size="0.08 0.23 0.05"/></geometry>
@@ -51,6 +80,30 @@
     <parent link="chassis"/>
     <child link="top_front_left_box_RPiv5"/>
     <origin xyz="0.35 0.13 0.125" rpy="0 0 0"/>
+  </joint>
+
+  <link name="top_rear_2.5Gbps_switch">
+    <visual>
+      <geometry><box size="0.10 0.20 0.04"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_trr_switch" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_2.5Gbps_switch"/>
+    <origin xyz="-0.30 0.20 0.12" rpy="0 0 0"/>
+  </joint>
+
+  <link name="top_front_PoE_gateway">
+    <visual>
+      <geometry><box size="0.08 0.09 0.03"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_tc_gateway" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_front_PoE_gateway"/>
+    <origin xyz="0.1 -0.1 0.115" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_right_box_RPiv5">
@@ -82,58 +135,6 @@
     <origin xyz="0.48 -0.05 0.12" rpy="0 0 0"/>
   </joint>
 
-  <link name="top_rear_camera">
-    <visual>
-      <geometry><box size="0.03 0.04 0.04"/></geometry>
-      <material name="black"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
-      <geometry><box size="0.08 0.02 0.002"/></geometry>
-      <material name="orange"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_top_rear_camera" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_camera"/>
-    <origin xyz="-0.48 -0.05 0.12" rpy="0 0 3.14159"/>
-  </joint>
-
-  <link name="top_rear_CANgateway_RearCAM">
-    <visual>
-      <geometry><box size="0.06 0.04 0.03"/></geometry>
-      <material name="white"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_trl_gateway" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_CANgateway_RearCAM"/>
-    <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_front_PoE_gateway">
-    <visual>
-      <geometry><box size="0.08 0.09 0.03"/></geometry>
-      <material name="dark_grey"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_tc_gateway" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_front_PoE_gateway"/>
-    <origin xyz="0.1 -0.1 0.115" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_rear_right_switch">
-    <visual>
-      <geometry><box size="0.10 0.18 0.04"/></geometry>
-      <material name="dark_grey"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_trr_switch" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_right_switch"/>
-    <origin xyz="-0.25 -0.15 0.12" rpy="0 0 0"/>
-  </joint>
 
   <link name="fl_wheel">
     <visual>
