@@ -399,7 +399,7 @@
   <joint name="chassis_to_top_left_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
     <child link="top_left_lidar_HummingBird_D1"/>
-    <origin xyz="0.170 0.25 0.115" rpy="0 0 1.5708"/>
+    <origin xyz="0.150 0.23 0.115" rpy="0 0 1.5708"/>
   </joint>
 
   <link name="top_right_lidar_HummingBird_D1">
@@ -456,7 +456,7 @@
   <joint name="chassis_to_top_right_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
     <child link="top_right_lidar_HummingBird_D1"/>
-    <origin xyz="0.170 -0.25 0.115" rpy="0 0 -1.5708"/>
+    <origin xyz="0.150 -0.23 0.115" rpy="0 0 -1.5708"/>
   </joint>
 
 </robot>
