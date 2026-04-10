@@ -238,29 +238,7 @@
       </geometry>
       <material name="silver"/>
     </visual>
-    <visual>
-      <origin xyz="0.051 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.002 0.118 0.058"/>
-      </geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <visual>
-      <origin xyz="0.05 0.03 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.025"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="0.05 -0.03 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.025"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
   </link>
-  
   <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
     <child link="front_top_lidar_SOSLab_MLX120"/>
@@ -274,29 +252,7 @@
       </geometry>
       <material name="silver"/>
     </visual>
-    <visual>
-      <origin xyz="0.051 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.002 0.118 0.058"/>
-      </geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <visual>
-      <origin xyz="0.05 0.03 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.025"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="0.05 -0.03 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.025"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
   </link>
-
   <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
     <child link="rear_top_lidar_SOSLab_MLX120"/>
@@ -345,118 +301,73 @@
     <origin xyz="0.52 0 0.05" rpy="0 0 0"/>
   </joint>
 
-  <link name="top_left_lidar_HummingBird_D1">
+  <link name="front_gs2_lidar">
     <visual>
-      <geometry>
-        <box size="0.04 0.07 0.03"/>
-      </geometry>
+      <origin xyz="0.0025 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.005 0.05 0.05"/></geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.02 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.06 0.02"/>
-      </geometry>
+      <origin xyz="0.015 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.02 0.04 0.04"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <visual>
+      <origin xyz="0.025 0 0.01" rpy="0 -0.3 0"/>
+      <geometry><box size="0.005 0.02 0.015"/></geometry>
+      <material name="silver"/>
+    </visual>
+    <visual>
+      <origin xyz="0.025 0.01 -0.01" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.006" length="0.005"/></geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.025 0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.015"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <visual>
-      <origin xyz="0.03 0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="0.025 -0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.015"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <visual>
-      <origin xyz="0.03 -0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/>
-      <geometry>
-        <cylinder radius="0.012" length="0.015"/>
-      </geometry>
+      <origin xyz="0.025 -0.01 -0.01" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.006" length="0.005"/></geometry>
       <material name="black"/>
     </visual>
   </link>
-
-  <joint name="chassis_to_top_left_lidar_HummingBird_D1" type="fixed">
+  <joint name="chassis_to_front_gs2_lidar" type="fixed">
     <parent link="chassis"/>
-    <child link="top_left_lidar_HummingBird_D1"/>
-    <origin xyz="-0.030 0.260 0.115" rpy="0 0 1.5708"/>
+    <child link="front_gs2_lidar"/>
+    <origin xyz="0.5 0 0" rpy="0 0 0"/>
   </joint>
 
-  <link name="top_right_lidar_HummingBird_D1">
-    <visual>
-      <geometry>
-        <box size="0.04 0.07 0.03"/>
-      </geometry>
-      <material name="black"/>
-    </visual>
-    <visual>
-      <origin xyz="0.02 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.06 0.02"/>
-      </geometry>
-      <material name="black"/>
-    </visual>
-    <visual>
-      <origin xyz="0.025 0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.015"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <visual>
-      <origin xyz="0.03 0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="0.025 -0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.015"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <visual>
-      <origin xyz="0.03 -0.015 0" rpy="0 0 0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-      <material name="sensor_blue"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/>
-      <geometry>
-        <cylinder radius="0.012" length="0.015"/>
-      </geometry>
-      <material name="black"/>
-    </visual>
+  <link name="rear_gs2_lidar">
+    <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 0 0.01" rpy="0 -0.3 0"/><geometry><box size="0.005 0.02 0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.025 -0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
   </link>
-
-  <joint name="chassis_to_top_right_lidar_HummingBird_D1" type="fixed">
+  <joint name="chassis_to_rear_gs2_lidar" type="fixed">
     <parent link="chassis"/>
-    <child link="top_right_lidar_HummingBird_D1"/>
-    <origin xyz="-0.030 -0.260 0.115" rpy="0 0 -1.5708"/>
-  </joint>
+    <child link="rear_gs2_lidar"/>
+    <origin xyz="-0.5 0 0" rpy="0 0 3.14159"/> </joint>
+
+  <link name="left_gs2_lidar">
+    <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 0 0.01" rpy="0 -0.3 0"/><geometry><box size="0.005 0.02 0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.025 -0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
+  </link>
+  <joint name="chassis_to_left_gs2_lidar" type="fixed">
+    <parent link="chassis"/>
+    <child link="left_gs2_lidar"/>
+    <origin xyz="0 0.3 0" rpy="0 0 1.5708"/> </joint>
+
+  <link name="right_gs2_lidar">
+    <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 0 0.01" rpy="0 -0.3 0"/><geometry><box size="0.005 0.02 0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
+    <visual><origin xyz="0.025 -0.01 -0.01" rpy="0 1.5708 0"/><geometry><cylinder radius="0.006" length="0.005"/></geometry><material name="black"/></visual>
+  </link>
+  <joint name="chassis_to_right_gs2_lidar" type="fixed">
+    <parent link="chassis"/>
+    <child link="right_gs2_lidar"/>
+    <origin xyz="0 -0.3 0" rpy="0 0 -1.5708"/> </joint>
 
 </robot>
