@@ -10,9 +10,6 @@
   <material name="acrylic_clear">
     <color rgba="0.8 0.9 1.0 0.4"/>
   </material>
-  <material name="silver">
-    <color rgba="0.75 0.75 0.75 1.0"/>
-  </material>
 
   <link name="base_link">
   </link>
@@ -145,8 +142,7 @@
   </link>
   <joint name="chassis_to_camera_top" type="fixed">
     <parent link="chassis"/>
-    <child name="front_camera_top"/>
-    <origin xyz="0.47 0 0.08" rpy="0 0 0"/>
+    <child link="front_camera_top"/> <origin xyz="0.47 0 0.08" rpy="0 0 0"/>
   </joint>
 
   <link name="front_sensor_box">
