@@ -388,7 +388,7 @@
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="-0.015 0.02 0.0225" rpy="0 0 0"/>
+      <origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/>
       <geometry>
         <cylinder radius="0.012" length="0.015"/>
       </geometry>
@@ -445,7 +445,7 @@
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="-0.015 0.02 0.0225" rpy="0 0 0"/>
+      <origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/>
       <geometry>
         <cylinder radius="0.012" length="0.015"/>
       </geometry>
