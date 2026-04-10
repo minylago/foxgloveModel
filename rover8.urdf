@@ -91,7 +91,7 @@
   <joint name="chassis_to_trr_switch" type="fixed">
     <parent link="chassis"/>
     <child link="top_rear_2.5Gbps_switch"/>
-    <origin xyz="-0.30 0.20 0.12" rpy="0 0 0"/>
+    <origin xyz="-0.30 0.12 0.12" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_PoE_gateway">
