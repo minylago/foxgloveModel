@@ -348,47 +348,47 @@
   <link name="top_left_lidar">
     <visual>
       <geometry>
-        <box size="0.12 0.07 0.06"/>
+        <box size="0.04 0.07 0.06"/>
       </geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.06 0 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.02 0 -0.01" rpy="0 0 0"/>
       <geometry>
-        <box size="0.02 0.06 0.04"/>
+        <box size="0.01 0.06 0.04"/>
       </geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.065 0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.025 0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.015"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <visual>
-      <origin xyz="0.07 0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.03 0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.01"/>
       </geometry>
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="0.065 -0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.025 -0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.015"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <visual>
-      <origin xyz="0.07 -0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.03 -0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.01"/>
       </geometry>
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="-0.03 0.02 0.035" rpy="0 0 0"/>
+      <origin xyz="-0.01 0.02 0.035" rpy="0 0 0"/>
       <geometry>
         <cylinder radius="0.012" length="0.015"/>
       </geometry>
@@ -399,53 +399,53 @@
   <joint name="chassis_to_top_left_lidar" type="fixed">
     <parent link="chassis"/>
     <child link="top_left_lidar"/>
-    <origin xyz="0.2 0.28 0.13" rpy="0 0 0"/>
+    <origin xyz="0.2 0.28 0.13" rpy="0 0 1.5708"/>
   </joint>
 
   <link name="top_right_lidar">
     <visual>
       <geometry>
-        <box size="0.12 0.07 0.06"/>
+        <box size="0.04 0.07 0.06"/>
       </geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.06 0 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.02 0 -0.01" rpy="0 0 0"/>
       <geometry>
-        <box size="0.02 0.06 0.04"/>
+        <box size="0.01 0.06 0.04"/>
       </geometry>
       <material name="black"/>
     </visual>
     <visual>
-      <origin xyz="0.065 0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.025 0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.015"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <visual>
-      <origin xyz="0.07 0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.03 0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.01"/>
       </geometry>
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="0.065 -0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.025 -0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.015"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <visual>
-      <origin xyz="0.07 -0.015 -0.01" rpy="0 0 0"/>
+      <origin xyz="0.03 -0.015 -0.01" rpy="0 0 0"/>
       <geometry>
         <sphere radius="0.01"/>
       </geometry>
       <material name="sensor_blue"/>
     </visual>
     <visual>
-      <origin xyz="-0.03 0.02 0.035" rpy="0 0 0"/>
+      <origin xyz="-0.01 0.02 0.035" rpy="0 0 0"/>
       <geometry>
         <cylinder radius="0.012" length="0.015"/>
       </geometry>
@@ -456,7 +456,7 @@
   <joint name="chassis_to_top_right_lidar" type="fixed">
     <parent link="chassis"/>
     <child link="top_right_lidar"/>
-    <origin xyz="0.2 -0.28 0.13" rpy="0 0 0"/>
+    <origin xyz="0.2 -0.28 0.13" rpy="0 0 -1.5708"/>
   </joint>
 
 </robot>
