@@ -8,7 +8,8 @@
     <color rgba="0.2 0.2 0.2 1.0"/>
   </material>
   <material name="acrylic_clear">
-    <color rgba="0.8 0.9 1.0 0.3"/> </material>
+    <color rgba="0.8 0.9 1.0 0.3"/> 
+  </material>
   <material name="sensor_blue">
     <color rgba="0.1 0.3 0.8 1.0"/>
   </material>
@@ -42,7 +43,7 @@
   <joint name="fl_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="fl_wheel"/>
-    <origin xyz="0.35 0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="0.35 0.25 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -57,7 +58,7 @@
   <joint name="fr_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="fr_wheel"/>
-    <origin xyz="0.35 -0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="0.35 -0.25 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -72,7 +73,7 @@
   <joint name="rl_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="rl_wheel"/>
-    <origin xyz="-0.35 0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="-0.35 0.25 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -87,7 +88,7 @@
   <joint name="rr_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="rr_wheel"/>
-    <origin xyz="-0.35 -0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="-0.35 -0.25 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
