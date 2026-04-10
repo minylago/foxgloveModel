@@ -43,7 +43,7 @@
   
   <link name="top_front_left_box">
     <visual>
-      <geometry><box size="0.08 0.18 0.05"/></geometry>
+      <geometry><box size="0.08 0.22 0.05"/></geometry>
       <material name="black"/>
     </visual>
   </link>
@@ -55,7 +55,7 @@
 
   <link name="top_front_right_box">
     <visual>
-      <geometry><box size="0.08 0.18 0.05"/></geometry>
+      <geometry><box size="0.08 0.22 0.05"/></geometry>
       <material name="black"/>
     </visual>
   </link>
