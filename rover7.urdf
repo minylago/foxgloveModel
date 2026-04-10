@@ -43,26 +43,26 @@
   
   <link name="top_front_left_box">
     <visual>
-      <geometry><box size="0.08 0.25 0.05"/></geometry>
+      <geometry><box size="0.08 0.24 0.05"/></geometry>
       <material name="black"/>
     </visual>
   </link>
   <joint name="chassis_to_tfl_box" type="fixed">
     <parent link="chassis"/>
     <child link="top_front_left_box"/>
-    <origin xyz="0.35 0.15 0.125" rpy="0 0 0"/>
+    <origin xyz="0.35 0.13 0.125" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_right_box">
     <visual>
-      <geometry><box size="0.08 0.25 0.05"/></geometry>
+      <geometry><box size="0.08 0.24 0.05"/></geometry>
       <material name="black"/>
     </visual>
   </link>
   <joint name="chassis_to_tfr_box" type="fixed">
     <parent link="chassis"/>
     <child link="top_front_right_box"/>
-    <origin xyz="0.35 -0.15 0.125" rpy="0 0 0"/>
+    <origin xyz="0.35 -0.13 0.125" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_camera">
