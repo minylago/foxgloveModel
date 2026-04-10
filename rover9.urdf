@@ -73,6 +73,41 @@
     <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
   </joint>
 
+
+  <link name="moonwalker_imu">
+    <visual>
+      <geometry><box size="0.04 0.04 0.01"/></geometry>
+      <material name="gold"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_imu" type="fixed">
+    <parent link="chassis"/>
+    <child link="moonwalker_imu"/>
+    <origin xyz="0.2 0.16 0.105" rpy="0 0 0"/> 
+  </joint>
+
+  <link name="insung_transceiver">
+    <visual>
+      <geometry><box size="0.8 0.6 0.03"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+    <visual>
+      <origin xyz="0.06 0.02 0" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
+      <material name="orange"/> 
+    </visual>
+    <visual>
+      <origin xyz="0.06 -0.02 0" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_insung" type="fixed">
+    <parent link="chassis"/>
+    <child link="insung_transceiver"/>
+    <origin xyz="0.2 0.13 0.115" rpy="0 0 0"/>
+  </joint>
+
   <link name="top_front_left_box_RPiv5">
     <visual>
       <geometry><box size="0.08 0.23 0.05"/></geometry>
@@ -108,42 +143,6 @@
     <child link="top_front_PoE_gateway"/>
     <origin xyz="0.1 -0.08 0.115" rpy="0 0 0"/>
   </joint>
-
-
-  <link name="moonwalker_imu">
-    <visual>
-      <geometry><box size="0.04 0.04 0.01"/></geometry>
-      <material name="gold"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_imu" type="fixed">
-    <parent link="chassis"/>
-    <child link="moonwalker_imu"/>
-    <origin xyz="0.3 -0.14 0.105" rpy="0 0 0"/> 
-  </joint>
-
-  <link name="insung_transceiver">
-    <visual>
-      <geometry><box size="0.12 0.10 0.03"/></geometry>
-      <material name="dark_grey"/>
-    </visual>
-    <visual>
-      <origin xyz="0.06 0.02 0" rpy="0 1.5708 0"/>
-      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="orange"/> 
-    </visual>
-    <visual>
-      <origin xyz="0.06 -0.02 0" rpy="0 1.5708 0"/>
-      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="orange"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_insung" type="fixed">
-    <parent link="chassis"/>
-    <child link="insung_transceiver"/>
-    <origin xyz="0.2 -0.13 0.115" rpy="0 0 0"/>
-  </joint>
-
 
   <link name="top_front_right_box_RPiv5">
     <visual>
