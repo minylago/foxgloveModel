@@ -50,7 +50,7 @@
   <joint name="chassis_to_tfl_box" type="fixed">
     <parent link="chassis"/>
     <child link="top_front_left_box"/>
-    <origin xyz="0.38 0.15 0.125" rpy="0 0 0"/>
+    <origin xyz="0.35 0.15 0.125" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_right_box">
@@ -62,7 +62,7 @@
   <joint name="chassis_to_tfr_box" type="fixed">
     <parent link="chassis"/>
     <child link="top_front_right_box"/>
-    <origin xyz="0.38 -0.15 0.125" rpy="0 0 0"/>
+    <origin xyz="0.35 -0.15 0.125" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_camera">
@@ -158,19 +158,6 @@
     <child link="top_right_sensor1"/>
     <origin xyz="-0.15 -0.27 0.105" rpy="0 0 0"/>
   </joint>
-
-  <link name="top_center_cable_trunk">
-    <visual>
-      <geometry><cylinder radius="0.012" length="0.85"/></geometry>
-      <material name="black"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_cable_trunk" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_center_cable_trunk"/>
-    <origin xyz="0 -0.01 0.106" rpy="0 1.5708 0"/>
-  </joint>
-
 
   <link name="fl_wheel">
     <visual>
