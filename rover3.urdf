@@ -264,7 +264,7 @@
   <joint name="chassis_to_front_top_lidar" type="fixed">
     <parent link="chassis"/>
     <child link="front_top_lidar"/>
-    <origin xyz="0.15 0 0.13" rpy="0 0 0"/>
+    <origin xyz="0.45 0 0.13" rpy="0 0 0"/>
   </joint>
 
   <link name="rear_top_lidar">
@@ -300,7 +300,7 @@
   <joint name="chassis_to_rear_top_lidar" type="fixed">
     <parent link="chassis"/>
     <child link="rear_top_lidar"/>
-    <origin xyz="-0.2 0 0.13" rpy="0 0 3.14159"/>
+    <origin xyz="-0.45 0 0.13" rpy="0 0 3.14159"/>
   </joint>
 
   <link name="left_lidar">
