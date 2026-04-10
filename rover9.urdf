@@ -83,7 +83,7 @@
   <joint name="chassis_to_imu" type="fixed">
     <parent link="chassis"/>
     <child link="moonwalker_imu"/>
-    <origin xyz="0.2 0.16 0.105" rpy="0 0 0"/> 
+    <origin xyz="0.24 0.16 0.105" rpy="0 0 0"/> 
   </joint>
 
   <link name="insung_transceiver">
