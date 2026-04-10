@@ -80,7 +80,7 @@
   <joint name="fl_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="fl_wheel"/>
-    <origin xyz="0.35 0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="0.35 0.30 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -129,7 +129,7 @@
   <joint name="fr_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="fr_wheel"/>
-    <origin xyz="0.35 -0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="0.35 -0.30 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -178,7 +178,7 @@
   <joint name="rl_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="rl_wheel"/>
-    <origin xyz="-0.35 0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="-0.35 0.30 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
@@ -227,7 +227,7 @@
   <joint name="rr_wheel_joint" type="continuous">
     <parent link="chassis"/>
     <child link="rr_wheel"/>
-    <origin xyz="-0.35 -0.35 -0.05" rpy="-1.5708 0 0"/>
+    <origin xyz="-0.35 -0.30 -0.05" rpy="-1.5708 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
 
