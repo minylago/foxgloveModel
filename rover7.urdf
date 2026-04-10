@@ -264,7 +264,7 @@
   <joint name="chassis_to_left_lidar_TG30" type="fixed">
     <parent link="chassis"/>
     <child link="left_lidar_TG30"/>
-    <origin xyz="0.030 0.285 0.11" rpy="0 0 0"/>
+    <origin xyz="0.050 0.270 0.11" rpy="0 0 0"/>
   </joint>
 
   <link name="right_lidar_TG30">
@@ -281,7 +281,7 @@
   <joint name="chassis_to_right_lidar_TG30" type="fixed">
     <parent link="chassis"/>
     <child link="right_lidar_TG30"/>
-    <origin xyz="0.030 -0.285 0.11" rpy="0 0 0"/>
+    <origin xyz="0.050 -0.270 0.11" rpy="0 0 0"/>
   </joint>
 
   <link name="front_radar_DRVEGRD171 ">
