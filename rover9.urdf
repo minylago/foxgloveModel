@@ -92,12 +92,12 @@
       <material name="dark_grey"/>
     </visual>
     <visual>
-      <origin xyz="0.06 0.02 0" rpy="0 1.5708 0"/>
+      <origin xyz="0.045 0.02 0" rpy="0 1.5708 0"/>
       <geometry><cylinder radius="0.003" length="0.01"/></geometry>
       <material name="orange"/> 
     </visual>
     <visual>
-      <origin xyz="0.06 -0.02 0" rpy="0 1.5708 0"/>
+      <origin xyz="0.045 -0.02 0" rpy="0 1.5708 0"/>
       <geometry><cylinder radius="0.003" length="0.01"/></geometry>
       <material name="orange"/>
     </visual>
