@@ -105,7 +105,7 @@
   <joint name="chassis_to_insung" type="fixed">
     <parent link="chassis"/>
     <child link="insung_transceiver"/>
-    <origin xyz="0.2 0.13 0.115" rpy="0 0 0"/>
+    <origin xyz="0.2 0.03 0.115" rpy="0 0 0"/>
   </joint>
 
   <link name="top_front_left_box_RPiv5">
