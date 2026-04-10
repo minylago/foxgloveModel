@@ -231,7 +231,7 @@
     <axis xyz="0 0 1"/>
   </joint>
 
-  <link name="front_top_lidar">
+  <link name="front_top_lidar_SOSLab_MLX120">
     <visual>
       <geometry>
         <box size="0.1 0.12 0.06"/>
@@ -261,13 +261,13 @@
     </visual>
   </link>
   
-  <joint name="chassis_to_front_top_lidar" type="fixed">
+  <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
-    <child link="front_top_lidar"/>
+    <child link="front_top_lidar_SOSLab_MLX120"/>
     <origin xyz="0.43 0 0.13" rpy="0 0 0"/>
   </joint>
 
-  <link name="rear_top_lidar">
+  <link name="rear_top_lidar_SOSLab_MLX120">
     <visual>
       <geometry>
         <box size="0.1 0.12 0.06"/>
@@ -297,13 +297,13 @@
     </visual>
   </link>
 
-  <joint name="chassis_to_rear_top_lidar" type="fixed">
+  <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
-    <child link="rear_top_lidar"/>
+    <child link="rear_top_lidar_SOSLab_MLX120"/>
     <origin xyz="-0.43 0 0.13" rpy="0 0 3.14159"/>
   </joint>
 
-  <link name="left_lidar">
+  <link name="left_lidar_TG30">
     <visual>
       <geometry>
         <cylinder radius="0.04" length="0.03"/>
@@ -311,13 +311,13 @@
       <material name="black"/>
     </visual>
   </link>
-  <joint name="chassis_to_left_lidar" type="fixed">
+  <joint name="chassis_to_left_lidar_TG30" type="fixed">
     <parent link="chassis"/>
-    <child link="left_lidar"/>
+    <child link="left_lidar_TG30"/>
     <origin xyz="0.1 0.255 0.11" rpy="0 0 0"/>
   </joint>
 
-  <link name="right_lidar">
+  <link name="right_lidar_TG30">
     <visual>
       <geometry>
         <cylinder radius="0.04" length="0.03"/>
@@ -325,13 +325,13 @@
       <material name="black"/>
     </visual>
   </link>
-  <joint name="chassis_to_right_lidar" type="fixed">
+  <joint name="chassis_to_right_lidar_TG30" type="fixed">
     <parent link="chassis"/>
-    <child link="right_lidar"/>
+    <child link="right_lidar_TG30"/>
     <origin xyz="0.1 -0.255 0.11" rpy="0 0 0"/>
   </joint>
 
-  <link name="front_radar">
+  <link name="front_radar_DRVEGRD171 ">
     <visual>
       <geometry>
         <box size="0.05 0.15 0.1"/>
@@ -339,13 +339,13 @@
       <material name="black"/>
     </visual>
   </link>
-  <joint name="chassis_to_front_radar" type="fixed">
+  <joint name="chassis_to_front_radar_DRVEGRD171 " type="fixed">
     <parent link="chassis"/>
-    <child link="front_radar"/>
+    <child link="front_radar_DRVEGRD171 "/>
     <origin xyz="0.52 0 0.05" rpy="0 0 0"/>
   </joint>
 
-  <link name="top_left_lidar">
+  <link name="top_left_lidar_HummingBird_D1">
     <visual>
       <geometry>
         <box size="0.04 0.07 0.03"/>
@@ -396,13 +396,13 @@
     </visual>
   </link>
 
-  <joint name="chassis_to_top_left_lidar" type="fixed">
+  <joint name="chassis_to_top_left_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
-    <child link="top_left_lidar"/>
+    <child link="top_left_lidar_HummingBird_D1"/>
     <origin xyz="0.2 0.28 0.115" rpy="0 0 1.5708"/>
   </joint>
 
-  <link name="top_right_lidar">
+  <link name="top_right_lidar_HummingBird_D1">
     <visual>
       <geometry>
         <box size="0.04 0.07 0.03"/>
@@ -453,9 +453,9 @@
     </visual>
   </link>
 
-  <joint name="chassis_to_top_right_lidar" type="fixed">
+  <joint name="chassis_to_top_right_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
-    <child link="top_right_lidar"/>
+    <child link="top_right_lidar_HummingBird_D1"/>
     <origin xyz="0.2 -0.28 0.115" rpy="0 0 -1.5708"/>
   </joint>
 
