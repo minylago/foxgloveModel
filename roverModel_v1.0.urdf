@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot name="custom_rover">
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 모델링에 사용되는 색상 설정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <material name="black">
     <color rgba="0.1 0.1 0.1 1.0"/>
   </material>
@@ -44,10 +46,15 @@
     <color rgba="0.05 0.05 0.05 1.0"/>
   </material>
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 베이스 링크 생성
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="base_link">
   </link>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 차체로 쓰이는 박스 생성 및 그리드 내부 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="chassis">
     <visual>
       <geometry>
@@ -56,141 +63,15 @@
       <material name="dark_grey"/>
     </visual>
   </link>
-  
   <joint name="base_to_chassis" type="fixed">
     <parent link="base_link"/>
     <child link="chassis"/>
     <origin xyz="0 0 0.15" rpy="0 0 0"/>
   </joint>
-  
-  <link name="top_rear_camera">
-    <visual>
-      <geometry><box size="0.03 0.04 0.04"/></geometry>
-      <material name="black"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
-      <geometry><box size="0.08 0.02 0.002"/></geometry>
-      <material name="orange"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_top_rear_camera" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_camera"/>
-    <origin xyz="-0.48 -0.05 0.12" rpy="0 0 3.14159"/>
-  </joint>
 
-  <link name="top_rear_CANgateway_RearCAM">
-    <visual>
-      <geometry><box size="0.06 0.04 0.03"/></geometry>
-      <material name="white"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_trl_gateway" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_CANgateway_RearCAM"/>
-    <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
-  </joint>
-
-  <link name="moonwalker_imu">
-    <visual>
-      <geometry><box size="0.04 0.04 0.01"/></geometry>
-      <material name="gold"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_imu" type="fixed">
-    <parent link="chassis"/>
-    <child link="moonwalker_imu"/>
-    <origin xyz="0.22 0.16 0.105" rpy="0 0 0"/> 
-  </joint>
-
-  <link name="insung_transceiver">
-    <visual>
-      <geometry><box size="0.08 0.06 0.03"/></geometry>
-      <material name="insung_black"/>
-    </visual>
-    <visual>
-      <origin xyz="0.045 0.02 0" rpy="0 1.5708 0"/>
-      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="connector_gold"/> 
-    </visual>
-    <visual>
-      <origin xyz="0.045 -0.02 0" rpy="0 1.5708 0"/>
-      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="connector_gold"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_insung" type="fixed">
-    <parent link="chassis"/>
-    <child link="insung_transceiver"/>
-    <origin xyz="0.2 0.060 0.115" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_front_left_box_RPiv5">
-    <visual>
-      <geometry><box size="0.08 0.23 0.05"/></geometry>
-      <material name="black"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_tfl_box" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_front_left_box_RPiv5"/>
-    <origin xyz="0.35 0.13 0.125" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_rear_2.5Gbps_switch">
-    <visual>
-      <geometry><box size="0.10 0.20 0.04"/></geometry>
-      <material name="dark_grey"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_trr_switch" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_rear_2.5Gbps_switch"/>
-    <origin xyz="-0.30 0.12 0.12" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_front_PoE_gateway">
-    <visual>
-      <geometry><box size="0.08 0.10 0.03"/></geometry>
-      <material name="dark_grey"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_tc_gateway" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_front_PoE_gateway"/>
-    <origin xyz="0.1 -0.08 0.115" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_front_right_box_RPiv5">
-    <visual>
-      <geometry><box size="0.08 0.23 0.05"/></geometry>
-      <material name="black"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_tfr_box" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_front_right_box_RPiv5"/>
-    <origin xyz="0.35 -0.13 0.125" rpy="0 0 0"/>
-  </joint>
-
-  <link name="top_front_camera">
-    <visual>
-      <geometry><box size="0.03 0.04 0.04"/></geometry>
-      <material name="black"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
-      <geometry><box size="0.08 0.02 0.002"/></geometry>
-      <material name="orange"/>
-    </visual>
-  </link>
-  <joint name="chassis_to_top_front_camera" type="fixed">
-    <parent link="chassis"/>
-    <child link="top_front_camera"/>
-    <origin xyz="0.48 -0.05 0.12" rpy="0 0 0"/>
-  </joint>
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 4개 바퀴 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="fl_wheel">
     <visual>
       <geometry><cylinder radius="0.10" length="0.08"/></geometry>
@@ -257,6 +138,155 @@
     <axis xyz="0 0 1"/>
   </joint>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞/뒤 카메라 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="top_front_camera">
+    <visual>
+      <geometry><box size="0.03 0.04 0.04"/></geometry>
+      <material name="black"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
+      <geometry><box size="0.08 0.02 0.002"/></geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_top_front_camera" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_front_camera"/>
+    <origin xyz="0.48 -0.05 0.12" rpy="0 0 0"/>
+  </joint>
+  
+  <link name="top_rear_camera">
+    <visual>
+      <geometry><box size="0.03 0.04 0.04"/></geometry>
+      <material name="black"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.05 0 -0.01" rpy="0 0 0"/>
+      <geometry><box size="0.08 0.02 0.002"/></geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_top_rear_camera" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_camera"/>
+    <origin xyz="-0.48 -0.05 0.12" rpy="0 0 3.14159"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CAN 및 rear 카메라용 라즈베리파이 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="top_rear_CANgateway_RearCAM">
+    <visual>
+      <geometry><box size="0.06 0.04 0.03"/></geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_trl_gateway" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_CANgateway_RearCAM"/>
+    <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// INS/GPS 및 IMU 장비들  생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="moonwalker_imu">
+    <visual>
+      <geometry><box size="0.04 0.04 0.01"/></geometry>
+      <material name="gold"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_imu" type="fixed">
+    <parent link="chassis"/>
+    <child link="moonwalker_imu"/>
+    <origin xyz="0.22 0.16 0.105" rpy="0 0 0"/> 
+  </joint>
+  
+  <link name="insung_transceiver">
+    <visual>
+      <geometry><box size="0.08 0.06 0.03"/></geometry>
+      <material name="insung_black"/>
+    </visual>
+    <visual>
+      <origin xyz="0.045 0.02 0" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
+      <material name="connector_gold"/> 
+    </visual>
+    <visual>
+      <origin xyz="0.045 -0.02 0" rpy="0 1.5708 0"/>
+      <geometry><cylinder radius="0.003" length="0.01"/></geometry>
+      <material name="connector_gold"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_insung" type="fixed">
+    <parent link="chassis"/>
+    <child link="insung_transceiver"/>
+    <origin xyz="0.2 0.060 0.115" rpy="0 0 0"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞 라즈베리파이 박스 2개 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="top_front_left_box_RPiv5">
+    <visual>
+      <geometry><box size="0.08 0.23 0.05"/></geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_tfl_box" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_front_left_box_RPiv5"/>
+    <origin xyz="0.35 0.13 0.125" rpy="0 0 0"/>
+  </joint>
+  
+  <link name="top_front_right_box_RPiv5">
+    <visual>
+      <geometry><box size="0.08 0.23 0.05"/></geometry>
+      <material name="black"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_tfr_box" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_front_right_box_RPiv5"/>
+    <origin xyz="0.35 -0.13 0.125" rpy="0 0 0"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 뒤 2.5Gbps 이더넷 스위치 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="top_rear_2.5Gbps_switch">
+    <visual>
+      <geometry><box size="0.10 0.20 0.04"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_trr_switch" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_rear_2.5Gbps_switch"/>
+    <origin xyz="-0.30 0.12 0.12" rpy="0 0 0"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞 1Gbps PoE 이더넷 스위치 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  <link name="top_front_PoE_gateway">
+    <visual>
+      <geometry><box size="0.08 0.10 0.03"/></geometry>
+      <material name="dark_grey"/>
+    </visual>
+  </link>
+  <joint name="chassis_to_tc_gateway" type="fixed">
+    <parent link="chassis"/>
+    <child link="top_front_PoE_gateway"/>
+    <origin xyz="0.1 -0.08 0.115" rpy="0 0 0"/>
+  </joint>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞/뒤 SOSLab ML-X 120 라이다 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="front_top_lidar_SOSLab_MLX120">
     <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
@@ -281,6 +311,9 @@
     <origin xyz="-0.46 0.07 0.13" rpy="0 0 3.14159"/>
   </joint>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 좌/우 TG30 라이다 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="left_lidar_TG30">
     <visual>
       <geometry><cylinder radius="0.03" length="0.03"/></geometry>
@@ -315,6 +348,9 @@
     <origin xyz="0.050 -0.265 0.11" rpy="0 0 0"/>
   </joint>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 좌/우 허밍버드 D1 라이다 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="front_radar_DRVEGRD171 ">
     <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="0.065 0.105 0.002"/></geometry><material name="detailed_base"/></visual>
     <visual><origin xyz="0 0 0.011" rpy="0 0 0"/><geometry><box size="0.06 0.10 0.02"/></geometry><material name="detailed_gray"/></visual>
@@ -329,6 +365,9 @@
     <origin xyz="0.50 0 0.05" rpy="0 1.5708 0"/>
   </joint>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞/뒤 카메라 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="top_left_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
@@ -343,7 +382,7 @@
     <child link="top_left_lidar_HummingBird_D1"/>
     <origin xyz="-0.030 0.260 0.115" rpy="0 0 1.5708"/>
   </joint>
-
+  
   <link name="top_right_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
@@ -359,6 +398,9 @@
     <origin xyz="-0.030 -0.260 0.115" rpy="0 0 -1.5708"/>
   </joint>
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 앞/뒤 초근거리 GS2 라이다 생성 및 위치 지정
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
   <link name="left_gs2_lidar_front">
     <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
@@ -370,7 +412,7 @@
     <parent link="chassis"/>
     <child link="left_gs2_lidar_front"/>
     <origin xyz="0.47 0.3 0.07" rpy="0 0 1.5708"/> </joint>
-
+  
   <link name="left_gs2_lidar_rear">
     <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
@@ -382,7 +424,7 @@
     <parent link="chassis"/>
     <child link="left_gs2_lidar_rear"/>
     <origin xyz="-0.47 0.3 0.07" rpy="0 0 1.5708"/> </joint>
-
+  
   <link name="right_gs2_lidar_front">
     <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
@@ -394,7 +436,7 @@
     <parent link="chassis"/>
     <child link="right_gs2_lidar_front"/>
     <origin xyz="0.47 -0.3 0.07" rpy="0 0 -1.5708"/> </joint>
-
+  
   <link name="right_gs2_lidar_rear">
     <visual><origin xyz="0.0025 0 0" rpy="0 0 0"/><geometry><box size="0.005 0.05 0.05"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.015 0 0" rpy="0 0 0"/><geometry><box size="0.02 0.04 0.04"/></geometry><material name="dark_grey"/></visual>
@@ -406,4 +448,7 @@
     <parent link="chassis"/>
     <child link="right_gs2_lidar_rear"/>
     <origin xyz="-0.47 -0.3 0.07" rpy="0 0 -1.5708"/> </joint>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 모델 설정 종료
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 </robot>
