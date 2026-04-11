@@ -258,23 +258,12 @@
   </joint>
 
   <link name="front_top_lidar_SOSLab_MLX120">
-    <visual><geometry><box size="0.08671 0.156 0.078"/></geometry><material name="silver"/></visual>
-    <visual><origin xyz="0.0442 0 0" rpy="0 0 0"/><geometry><box size="0.0026 0.1534 0.0754"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
-    <visual><origin xyz="0.0429 0.039 0" rpy="0 0 0"/><geometry><sphere radius="0.0325"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
-    <visual><origin xyz="0.0429 -0.039 0" rpy="0 0 0"/><geometry><sphere radius="0.0325"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><geometry><box size="0.05336 0.096 0.048"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.0272 0 0" rpy="0 0 0"/><geometry><box size="0.0016 0.0944 0.0464"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
+    <visual><origin xyz="0.0264 0.024 0" rpy="0 0 0"/><geometry><sphere radius="0.02"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.0264 -0.024 0" rpy="0 0 0"/><geometry><sphere radius="0.02"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
   </link>
-  <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_top_lidar_SOSLab_MLX120"/>
-    <origin xyz="0.46 0.07 0.13" rpy="0 0 0"/>
-  </joint>
 
-  <link name="rear_top_lidar_SOSLab_MLX120">
-    <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
-    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
-    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
-    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
-  </link>
   <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
     <child link="rear_top_lidar_SOSLab_MLX120"/>
