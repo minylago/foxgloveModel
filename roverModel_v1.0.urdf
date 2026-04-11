@@ -25,6 +25,9 @@
   <material name="gold">
     <color rgba="0.8 0.6 0.1 1.0"/>
   </material>
+  <material name="wire_color">
+    <color rgba="1.0 0.4 0.0 1.0"/>
+  </material>
 
   <link name="base_link">
   </link>
@@ -43,7 +46,35 @@
     <child link="chassis"/>
     <origin xyz="0 0 0.15" rpy="0 0 0"/>
   </joint>
-  
+
+  <link name="wire_harness">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.95 0.04 0.01"/></geometry>
+      <material name="wire_color"/>
+    </visual>
+    
+    <visual><origin xyz="-0.48 -0.025 0" rpy="0 0 0"/><geometry><box size="0.01 0.05 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="-0.39 -0.025 0" rpy="0 0 0"/><geometry><box size="0.01 0.05 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.22 0.08 0" rpy="0 0 0"/><geometry><box size="0.01 0.16 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.20 0.03 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.35 0.065 0" rpy="0 0 0"/><geometry><box size="0.01 0.13 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="-0.30 0.06 0" rpy="0 0 0"/><geometry><box size="0.01 0.12 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.10 -0.04 0" rpy="0 0 0"/><geometry><box size="0.01 0.08 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.35 -0.065 0" rpy="0 0 0"/><geometry><box size="0.01 0.13 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.48 -0.025 0" rpy="0 0 0"/><geometry><box size="0.01 0.05 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.46 0.035 0" rpy="0 0 0"/><geometry><box size="0.01 0.07 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="-0.46 0.035 0" rpy="0 0 0"/><geometry><box size="0.01 0.07 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.05 0.1325 0" rpy="0 0 0"/><geometry><box size="0.01 0.265 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="0.05 -0.1325 0" rpy="0 0 0"/><geometry><box size="0.01 0.265 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="-0.03 0.13 0" rpy="0 0 0"/><geometry><box size="0.01 0.26 0.01"/></geometry><material name="wire_color"/></visual>
+    <visual><origin xyz="-0.03 -0.13 0" rpy="0 0 0"/><geometry><box size="0.01 0.26 0.01"/></geometry><material name="wire_color"/></visual>
+  </link>
+  <joint name="chassis_to_wire_harness" type="fixed">
+    <parent link="chassis"/>
+    <child link="wire_harness"/>
+    <origin xyz="0 0 0.105" rpy="0 0 0"/>
+  </joint>
   <link name="top_rear_camera">
     <visual>
       <geometry><box size="0.03 0.04 0.04"/></geometry>
@@ -311,9 +342,9 @@
   <link name="top_left_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
-    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.03 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
@@ -327,9 +358,9 @@
   <link name="top_right_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
-    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.03 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
+    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
