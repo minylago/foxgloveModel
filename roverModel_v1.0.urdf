@@ -85,27 +85,29 @@
     <origin xyz="0.22 0.16 0.105" rpy="0 0 0"/> 
   </joint>
 
+  <material name="insung_black">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+  <material name="connector_gold">
+    <color rgba="0.83 0.68 0.21 1.0"/>
+  </material>
+
   <link name="insung_transceiver">
     <visual>
       <geometry><box size="0.08 0.06 0.03"/></geometry>
-      <material name="dark_grey"/>
+      <material name="insung_black"/>
     </visual>
     <visual>
       <origin xyz="0.045 0.02 0" rpy="0 1.5708 0"/>
       <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="orange"/> 
+      <material name="connector_gold"/> 
     </visual>
     <visual>
       <origin xyz="0.045 -0.02 0" rpy="0 1.5708 0"/>
       <geometry><cylinder radius="0.003" length="0.01"/></geometry>
-      <material name="orange"/>
+      <material name="connector_gold"/>
     </visual>
   </link>
-  <joint name="chassis_to_insung" type="fixed">
-    <parent link="chassis"/>
-    <child link="insung_transceiver"/>
-    <origin xyz="0.2 0.060 0.115" rpy="0 0 0"/>
-  </joint>
 
   <link name="top_front_left_box_RPiv5">
     <visual>
