@@ -258,12 +258,23 @@
   </joint>
 
   <link name="front_top_lidar_SOSLab_MLX120">
-    <visual><geometry><box size="0.05336 0.096 0.048"/></geometry><material name="silver"/></visual>
-    <visual><origin xyz="0.0272 0 0" rpy="0 0 0"/><geometry><box size="0.0016 0.0944 0.0464"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
-    <visual><origin xyz="0.0264 0.024 0" rpy="0 0 0"/><geometry><sphere radius="0.02"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
-    <visual><origin xyz="0.0264 -0.024 0" rpy="0 0 0"/><geometry><sphere radius="0.02"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
   </link>
+  <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
+    <parent link="chassis"/>
+    <child link="front_top_lidar_SOSLab_MLX120"/>
+    <origin xyz="0.46 0.07 0.13" rpy="0 0 0"/>
+  </joint>
 
+  <link name="rear_top_lidar_SOSLab_MLX120">
+    <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+  </link>
   <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
     <child link="rear_top_lidar_SOSLab_MLX120"/>
@@ -305,38 +316,12 @@
   </joint>
 
   <link name="front_radar_DRVEGRD171 ">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry><box size="0.065 0.105 0.002"/></geometry>
-      <material name="detailed_base"/>
-    </visual>
-
-    <visual>
-      <origin xyz="0 0 0.011" rpy="0 0 0"/>
-      <geometry><box size="0.06 0.10 0.02"/></geometry>
-      <material name="detailed_gray"/>
-    </visual>
-
-    <visual>
-      <origin xyz="0.0325 0.0525 0.011" rpy="0 0 0"/>
-      <geometry><cylinder radius="0.005" length="0.022"/></geometry>
-      <material name="detailed_base"/>
-    </visual>
-    <visual>
-      <origin xyz="0.0325 -0.0525 0.011" rpy="0 0 0"/>
-      <geometry><cylinder radius="0.005" length="0.022"/></geometry>
-      <material name="detailed_base"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.0325 0.0525 0.011" rpy="0 0 0"/>
-      <geometry><cylinder radius="0.005" length="0.022"/></geometry>
-      <material name="detailed_base"/>
-    </visual>
-    <visual>
-      <origin xyz="-0.0325 -0.0525 0.011" rpy="0 0 0"/>
-      <geometry><cylinder radius="0.005" length="0.022"/></geometry>
-      <material name="detailed_base"/>
-    </visual>
+    <visual><origin xyz="0 0 0" rpy="0 0 0"/><geometry><box size="0.065 0.105 0.002"/></geometry><material name="detailed_base"/></visual>
+    <visual><origin xyz="0 0 0.011" rpy="0 0 0"/><geometry><box size="0.06 0.10 0.02"/></geometry><material name="detailed_gray"/></visual>
+    <visual><origin xyz="0.0325 0.0525 0.011" rpy="0 0 0"/><geometry><cylinder radius="0.005" length="0.022"/></geometry><material name="detailed_base"/></visual>
+    <visual><origin xyz="0.0325 -0.0525 0.011" rpy="0 0 0"/><geometry><cylinder radius="0.005" length="0.022"/></geometry><material name="detailed_base"/></visual>
+    <visual><origin xyz="-0.0325 0.0525 0.011" rpy="0 0 0"/><geometry><cylinder radius="0.005" length="0.022"/></geometry><material name="detailed_base"/></visual>
+    <visual><origin xyz="-0.0325 -0.0525 0.011" rpy="0 0 0"/><geometry><cylinder radius="0.005" length="0.022"/></geometry><material name="detailed_base"/></visual>
   </link>
   <joint name="chassis_to_front_radar_DRVEGRD171 " type="fixed">
     <parent link="chassis"/>
@@ -353,7 +338,6 @@
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
-
   <joint name="chassis_to_top_left_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
     <child link="top_left_lidar_HummingBird_D1"/>
@@ -369,7 +353,6 @@
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
-
   <joint name="chassis_to_top_right_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
     <child link="top_right_lidar_HummingBird_D1"/>
