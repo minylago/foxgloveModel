@@ -13,6 +13,9 @@
   <material name="sensor_blue">
     <color rgba="0.1 0.3 0.8 1.0"/>
   </material>
+  <material name="sensor_soslab_Lense">
+    <color rgba="0.012 0.212 0.325 1.0"/>
+  </material>
   <material name="silver">
     <color rgba="0.8 0.8 0.8 1.0"/>
   </material>
@@ -25,6 +28,13 @@
   <material name="gold">
     <color rgba="0.8 0.6 0.1 1.0"/>
   </material>
+  <material name="insung_black">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+  <material name="connector_gold">
+    <color rgba="0.83 0.68 0.21 1.0"/>
+  </material>
+
 
   <link name="base_link">
   </link>
@@ -84,19 +94,6 @@
     <child link="moonwalker_imu"/>
     <origin xyz="0.22 0.16 0.105" rpy="0 0 0"/> 
   </joint>
-
-  <material name="insung_black">
-    <color rgba="0.15 0.15 0.15 1.0"/>
-  </material>
-  <material name="connector_gold">
-    <color rgba="0.83 0.68 0.21 1.0"/>
-  </material>
-<material name="insung_black">
-    <color rgba="0.15 0.15 0.15 1.0"/>
-  </material>
-  <material name="connector_gold">
-    <color rgba="0.83 0.68 0.21 1.0"/>
-  </material>
 
   <link name="insung_transceiver">
     <visual>
@@ -254,8 +251,8 @@
   <link name="front_top_lidar_SOSLab_MLX120">
     <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="dark_grey"/></visual>
-    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_soslab_Lense"/></visual>
   </link>
   <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
@@ -266,8 +263,8 @@
   <link name="rear_top_lidar_SOSLab_MLX120">
     <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
     <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="dark_grey"/></visual>
-    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_soslab_Lense"/></visual>
   </link>
   <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
