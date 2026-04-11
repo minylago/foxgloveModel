@@ -91,6 +91,12 @@
   <material name="connector_gold">
     <color rgba="0.83 0.68 0.21 1.0"/>
   </material>
+<material name="insung_black">
+    <color rgba="0.15 0.15 0.15 1.0"/>
+  </material>
+  <material name="connector_gold">
+    <color rgba="0.83 0.68 0.21 1.0"/>
+  </material>
 
   <link name="insung_transceiver">
     <visual>
@@ -108,6 +114,11 @@
       <material name="connector_gold"/>
     </visual>
   </link>
+  <joint name="chassis_to_insung" type="fixed">
+    <parent link="chassis"/>
+    <child link="insung_transceiver"/>
+    <origin xyz="0.2 0.060 0.115" rpy="0 0 0"/>
+  </joint>
 
   <link name="top_front_left_box_RPiv5">
     <visual>
