@@ -318,7 +318,7 @@
   <link name="front_radar_DRVEGRD171 ">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry><box size="0.055 0.155 0.002"/></geometry>
+      <geometry><box size="0.065 0.105 0.002"/></geometry>
       <material name="detailed_base"/>
     </visual>
 
@@ -329,27 +329,26 @@
     </visual>
 
     <visual>
-      <origin xyz="0.0275 0.0775 0.011" rpy="0 0 0"/>
+      <origin xyz="0.0325 0.0525 0.011" rpy="0 0 0"/>
       <geometry><cylinder radius="0.005" length="0.022"/></geometry>
       <material name="detailed_base"/>
     </visual>
     <visual>
-      <origin xyz="0.0275 -0.0775 0.011" rpy="0 0 0"/>
+      <origin xyz="0.0325 -0.0525 0.011" rpy="0 0 0"/>
       <geometry><cylinder radius="0.005" length="0.022"/></geometry>
       <material name="detailed_base"/>
     </visual>
     <visual>
-      <origin xyz="-0.0275 0.0775 0.011" rpy="0 0 0"/>
+      <origin xyz="-0.0325 0.0525 0.011" rpy="0 0 0"/>
       <geometry><cylinder radius="0.005" length="0.022"/></geometry>
       <material name="detailed_base"/>
     </visual>
     <visual>
-      <origin xyz="-0.0275 -0.0775 0.011" rpy="0 0 0"/>
+      <origin xyz="-0.0325 -0.0525 0.011" rpy="0 0 0"/>
       <geometry><cylinder radius="0.005" length="0.022"/></geometry>
       <material name="detailed_base"/>
     </visual>
   </link>
-
   <joint name="chassis_to_front_radar_DRVEGRD171 " type="fixed">
     <parent link="chassis"/>
     <child link="front_radar_DRVEGRD171 "/>
