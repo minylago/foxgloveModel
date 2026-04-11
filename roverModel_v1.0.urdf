@@ -13,6 +13,12 @@
   <material name="sensor_blue">
     <color rgba="0.1 0.3 0.8 1.0"/>
   </material>
+  <material name="color_sensor_soslab_chasis">
+    <color rgba="0.792 0.800 0.808 1.0"/>
+  </material>
+  <material name="color_sensor_soslab_Lense">
+    <color rgba="0.012 0.212 0.325 1.0"/>
+  </material>
   <material name="silver">
     <color rgba="0.8 0.8 0.8 1.0"/>
   </material>
@@ -31,18 +37,7 @@
   <material name="connector_gold">
     <color rgba="0.83 0.68 0.21 1.0"/>
   </material>
-  <material name="detailed_gray">
-    <color rgba="0.1 0.1 0.1 1.0"/>
-  </material>
-  <material name="detailed_base">
-    <color rgba="0.05 0.05 0.05 1.0"/>
-  </material>
-  <material name="sensor_soslab_rense">
-    <color rgba="0.012 0.212 0.325 1.0"/>
-  </material>
-  <material name="color_sensor_soslab_chasis">
-    <color rgba="0.792 0.800 0.808 1.0"/>
-  </material>
+
 
   <link name="base_link">
   </link>
@@ -91,7 +86,6 @@
     <origin xyz="-0.39 -0.05 0.115" rpy="0 0 0"/>
   </joint>
 
-
   <link name="moonwalker_imu">
     <visual>
       <geometry><box size="0.04 0.04 0.01"/></geometry>
@@ -107,7 +101,7 @@
   <link name="insung_transceiver">
     <visual>
       <geometry><box size="0.08 0.06 0.03"/></geometry>
-      <material name="detailed_gray"/>
+      <material name="insung_black"/>
     </visual>
     <visual>
       <origin xyz="0.045 0.02 0" rpy="0 1.5708 0"/>
@@ -191,7 +185,6 @@
     <origin xyz="0.48 -0.05 0.12" rpy="0 0 0"/>
   </joint>
 
-
   <link name="fl_wheel">
     <visual>
       <geometry><cylinder radius="0.10" length="0.08"/></geometry>
@@ -260,9 +253,9 @@
 
   <link name="front_top_lidar_SOSLab_MLX120">
     <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
-    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="dark_grey"/></visual>
-    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
+    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
   </link>
   <joint name="chassis_to_front_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
@@ -272,9 +265,9 @@
 
   <link name="rear_top_lidar_SOSLab_MLX120">
     <visual><geometry><box size="0.0667 0.12 0.06"/></geometry><material name="silver"/></visual>
-    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="dark_grey"/></visual>
-    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="sensor_blue"/></visual>
+    <visual><origin xyz="0.034 0 0" rpy="0 0 0"/><geometry><box size="0.002 0.118 0.058"/></geometry><material name="color_sensor_soslab_chasis"/></visual>
+    <visual><origin xyz="0.033 0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
+    <visual><origin xyz="0.033 -0.03 0" rpy="0 0 0"/><geometry><sphere radius="0.025"/></geometry><material name="color_sensor_soslab_Lense"/></visual>
   </link>
   <joint name="chassis_to_rear_top_lidar_SOSLab_MLX120" type="fixed">
     <parent link="chassis"/>
@@ -316,6 +309,14 @@
     <origin xyz="0.050 -0.265 0.11" rpy="0 0 0"/>
   </joint>
 
+
+<material name="detailed_gray">
+    <color rgba="0.1 0.1 0.1 1.0"/>
+  </material>
+  <material name="detailed_base">
+    <color rgba="0.05 0.05 0.05 1.0"/>
+  </material>
+
   <link name="front_radar_DRVEGRD171 ">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -350,19 +351,18 @@
       <material name="detailed_base"/>
     </visual>
   </link>
-
   <joint name="chassis_to_front_radar_DRVEGRD171 " type="fixed">
     <parent link="chassis"/>
     <child link="front_radar_DRVEGRD171 "/>
-    <origin xyz="0.52 0 0.05" rpy="0 0 0"/>
+    <origin xyz="0.52 0 0.05" rpy="0 1.5708 0"/>
   </joint>
 
   <link name="top_left_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
-    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
     <visual><origin xyz="0.03 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
@@ -376,9 +376,9 @@
   <link name="top_right_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
-    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
     <visual><origin xyz="0.03 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
-    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="silver"/></visual>
+    <visual><origin xyz="0.025 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
     <visual><origin xyz="0.03 -0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.01"/></geometry><material name="sensor_blue"/></visual>
     <visual><origin xyz="-0.0275 0 0" rpy="0 1.5708 0"/><geometry><cylinder radius="0.012" length="0.015"/></geometry><material name="black"/></visual>
   </link>
