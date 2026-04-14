@@ -368,7 +368,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 앞/뒤 카메라 생성 및 위치 지정
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  <link name="d1_101_link">
+  <link name="top_left_lidar_HummingBird_D1">
     <visual><geometry><box size="0.04 0.07 0.03"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.02 0 0" rpy="0 0 0"/><geometry><box size="0.01 0.06 0.02"/></geometry><material name="black"/></visual>
     <visual><origin xyz="0.025 0.015 0" rpy="0 0 0"/><geometry><sphere radius="0.015"/></geometry><material name="dark_grey"/></visual>
@@ -379,7 +379,7 @@
   </link>
   <joint name="chassis_to_top_left_lidar_HummingBird_D1" type="fixed">
     <parent link="chassis"/>
-    <child link="d1_101_link"/>
+    <child link="top_left_lidar_HummingBird_D1"/>
     <origin xyz="-0.030 0.260 0.115" rpy="0 0 1.5708"/>
   </joint>
   
